@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Simple Dialogs by Evan Suong</h1>
+  <button id="alert">Alert</button>
+  <button id="confirm">Confirm</button>
+  <button id="prompt">Prompt</button>
+  <button id="safer-prompt">Safer Prompt</button>
+  <hr/>
+  <output id="output"></output>
+
+  <script>
+        
+    document.addEventListener('DOMContentLoaded', () => {
+
+      function attachListeners() {
+        
+        document.getElementById('alert').addEventListener('click', e => {
+          window.alert('you pressed the alert button');
+        });
+        document.getElementById('confirm').addEventListener('click', e => {
+          var confirmResult = window.confirm('did you press the confirm button?');
+          document.getElementById('output').innerHTML = `The value returned by the confirm method is: (${confirmResult})`;
+        });
+        document.getElementById('prompt').addEventListener('click', e => {
+          var promptResult = window.prompt('you pressed the prompt button?');
+          console.log(promptResult);
+          document.getElementById('output').innerHTML = promptResult ?
+            promptResult : "the user didn't enter anything";
+        });
+  
+        document.getElementById('safer-prompt').addEventListener('click', e => {
+          function cleanHTML(arr, dirtyHTML) {
+            let clean = DOMPurify.sanitize(dirtyHTML);
+            return clean;
+          }
+          
+          var saferPromptResult = window.prompt('you pressed the safer prompt button?');
+          document.getElementById('output').innerHTML = saferPromptResult ?
+          cleanHTML`${saferPromptResult}` : "the user didn't enter anything";
+        });
+      }
+      attachListeners();
+    });
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
+</body>
+</html>  

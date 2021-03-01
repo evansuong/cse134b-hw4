@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="post-list"></ul>
+
+  
+  <template id="post-template">
+    <li id="post-item">
+      <h2 id="title"></h2>
+      <p id="date"></p>
+      <p id="body"></p>
+      <p id="edit-btn">edit</p>
+      <p id="delete-btn">delete</p>
+    </li>
+  </template>
+
+  <dialog id="post-dialog">
+    <form method="dialog">
+      <label for="post-dialog-title">Title:</label>
+      <input id="post-dialog-title" type="text" />
+      <label for="post-dialog-summary">Summary:</label>
+      <textarea id="post-dialog-summary"></textarea>
+      <div>
+        <button value="cancel">Cancel</button>
+        <button value="default">Post</button>
+      </div>
+    </form>
+  </dialog>
+
+  
+  <dialog id="update-dialog">
+    <form method="dialog">
+      <label for="update-dialog-title">Title:</label>
+      <input id="update-dialog-title" type="text" />
+      <label for="update-dialog-summary">Summary:</label>
+      <textarea id="update-dialog-summary"></textarea>
+      <div>
+        <button value="cancel">Cancel</button>
+        <button value="default">Update</button>
+      </div>
+    </form>
+  </dialog>
+
+  <button id="create-post">Create Post</button>
+  <script src="blog.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
+
+</body>
+</html>

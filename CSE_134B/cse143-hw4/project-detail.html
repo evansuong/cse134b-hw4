@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan Suong</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .odd{
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ol>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="index.html">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ol>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Smartfin Ride API</h1>
+    <form action="project-detail.html">
+      <label for="projects">View another project:</label>
+      <select  name="projects" id="projects">
+        <optgroup label="Web">
+          <option value="project1">Project1</option>
+          <option value="project2">Project2</option>
+        </optgroup>
+        <optgroup label="Mobile">
+          <option value="project1">Project1</option>
+          <option value="project2">Project2</option>
+        </optgroup>
+        <optgroup label="Desktop">
+          <option value="project1">Project1</option>
+          <option value="project2">Project2</option>
+        </optgroup>
+      </select>
+    </form>
+    
+   
+    <section>
+      <h2>
+        Project Detials
+      </h2>
+      <div class="double-col">
+        <div>
+          <img src="res/thumbnails/project.png" alt="smartfin api demo"/>
+        </div>
+        <div class="content">
+          <p>
+            You can request smartfin data from: <code>http://ec2-54-203-7-235.us-west-2.compute.amazonaws.com/ride/</code> to run your own data analysis and compare your results to ours. 
+          </p>
+          <table>
+            <caption>Skills this project used</caption>
+            <colgroup>
+              <col class=odd>
+              <col>
+              <col class=odd>
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                <td>Languages</td>
+                <td>Technologies</td>   
+                <td>Stack</td>         
+                <td>Topics</td>         
+              </tr>
+            </thead>
+            <tr>
+              <td>Python</td>
+              <td>AWS EC2, Django, REST</td>
+              <td>Backend, Middleware</td>
+              <td>REST APIs, HTTP Protocol</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+   
+    <section>
+      <h2>What is Smartfin?</h2>
+      <div class="double-col">
+        <div>
+          <p>
+            The Smartfin Project aims to unite the surfing community and the research community 
+            in an effort to fill this gap in our oceanographic data. It began years ago with the 
+            collaborative vision of Scientists and Researchers working with the Scripps Institute 
+            of Oceanography, who hoped to innovate a new way to model the behaviour of our oceans."
+          </p>
+        </div>
+        <aside>
+          <iframe 
+          title="REU Video"
+          src="https://www.youtube.com/embed/rY145HV-ReM" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
+          ></iframe>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <ol>
+        <li>
+          <a href="#home">To Top</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+      </ol>
+    </nav>
+  </footer>
+</body>
+</html>

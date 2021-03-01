@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Custom Dialogs by Evan Suong</h1>
+  <button id="alert">Alert</button>
+  <button id="confirm">Confirm</button>
+  <button id="prompt">Prompt</button>
+  <hr/>
+  <output id="output"></output>
+
+  <dialog id="alert-dialog">
+    <form method="dialog">
+      <p>I am alerting that you clicked alert my dude</p>
+      <button id="btn" value="default">Ok, cool</button>
+    </form>
+  </dialog>
+
+  
+  <dialog id="confirm-dialog">
+    <form method="dialog">
+      <p>You confirm buddy guy?</p>
+      <button value="cancel">Cancel</button>
+      <button value="default">YEE</button>
+    </form>
+  </dialog>
+
+  <dialog id="prompt-dialog">
+    <form method="dialog">
+      <p>You confirm buddy guy?</p>
+      <input id="prompt-input" type="text"/>
+      <button value="cancel">Cancel</button>
+      <button value="default">YEE</button>
+    </form>
+  </dialog>
+
+  <script>
+        
+    document.addEventListener('DOMContentLoaded', () => {
+
+      function attachListeners() {
+        
+        document.getElementById('alert').addEventListener('click', e => {
+          if (typeof alertDialog.showModal === "function") {
+            alertDialog.showModal();
+          } else {
+            alert("The <dialog> API is not supported by this browser");
+          }
+        });
+
+        document.getElementById('confirm').addEventListener('click', e => {
+          if (typeof confirmDialog.showModal === "function") {
+            confirmDialog.showModal();
+          } else {
+            alert("The <dialog> API is not supported by this browser");
+          }
+        });
+
+        document.getElementById('prompt').addEventListener('click', e => {
+          if (typeof promptDialog.showModal === "function") {
+            promptDialog.showModal();
+          } else {
+            alert("The <dialog> API is not supported by this browser");
+          }
+        });
+        var alertDialog = document.getElementById('alert-dialog');
+        var confirmDialog = document.getElementById('confirm-dialog');
+        var promptDialog = document.getElementById('prompt-dialog');
+
+
+        confirmDialog.addEventListener('close', e => {
+          var confirmResult = confirmDialog.returnValue === 'default' ? true : false;
+          document.getElementById('output').innerHTML = `The value returned by the confirm method is: (${confirmResult})`;
+        });
+
+        function cleanHTML(arr, dirtyHTML) {
+          let clean = DOMPurify.sanitize(dirtyHTML);
+          return clean;
+        }
+
+        promptDialog.addEventListener('close', e => {
+          var promptResult;
+          if (promptDialog.returnValue === 'default') {
+            promptResult = document.getElementById('prompt-input').value;
+            promptResult =  cleanHTML`${promptResult}`;
+            promptResult = `The value returned by the prompt method is: (${promptResult})`;
+          } else {
+            promptResult = 'Nothing was inputted by the user';
+          }
+          document.getElementById('output').innerHTML = promptResult;
+        });
+      }
+
+      attachListeners();
+    });
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
+
+</body>
+</html>

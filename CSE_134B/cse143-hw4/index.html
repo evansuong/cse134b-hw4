@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan Suong</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7W45C7FGS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S7W45C7FGS');
+  </script>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="background"></div>
+
+  <header>
+    <nav>
+      <ol>
+        <!-- <li>
+          <a href="index.html">Home</a>
+        </li> -->
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="projects.html">Contact</a>
+        </li>
+      </ol>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <section id="landing">
+      <h1><span id="landing-title-1">EVAN</span><br/><span id="landing-title-2">SUONG</span></h1>
+      <aside class="img-container">
+        <img id="landing-img" src="res/me.png" alt="My picture"/>
+        <!-- turn this into picturte and source -->
+      </aside>
+      
+    </section> 
+    <section id="about">
+      <div id="about-title-container">
+        <div id="about-title-background">
+          <h1><span id="about-title-1">WHO</span><br/><span id="about-title-2">AM I?</span></h1>
+        </div>
+      </div>
+      
+      <aside class="img-container">
+        <img id="about-img" src="res/me.png" alt="My picture"/>
+      </aside>
+     
+      <div class="content-container">
+        <div>   
+          <h2>Yo!</h2>
+          <div>
+            <p>My name is Evan Suong and I am a freelance frontend web developer and a part-time quality assurance engineer, and <strong>I want to bring your vision to life</strong></p>
+          </div>
+        </div>
+        <div class="content-body">
+          <ul>
+            <li>
+              <details>
+                <summary>
+                  <h3>My Passion</h3>
+                </summary>
+                <p>I love to create and I love to learn. <br> Using the tools that the web has to offer, I am able to foster these passions of mine. Not only am I able to explore and master new skills, but I am able to leave my own mark on the world with the work I create.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <h3>My Style</h3>
+                </summary>
+
+                <p>
+                  I love to think outside the box and put my own flare into everything I do. I love to break away from the mold when it's called for. I thrive on forging my own path and leading the way for others to make their visions a reality.
+                </p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <h3>My Skills</h3>
+                </summary>
+                <p>
+                  Frontend: HTML, CSS, JavaScript, React
+                  Backend: Python, Django, Firebase
+                  Platforms: AWS EC2, Heroku, Netlify, Firebase
+                </p>
+              </details>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+     
+      <footer>
+        <a href="projects.html">
+          Check out my work!
+          <div id="arrow-container">
+            <svg width="70vw" height="38" viewBox="0 0 675 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M673.768 20.7678C674.744 19.7915 674.744 18.2085 673.768 17.2322L657.858 1.32233C656.882 0.34602 655.299 0.34602 654.322 1.32233C653.346 2.29864 653.346 3.88155 654.322 4.85786L668.464 19L654.322 33.1421C653.346 34.1184 653.346 35.7014 654.322 36.6777C655.299 37.654 656.882 37.654 657.858 36.6777L673.768 20.7678ZM-13 21.5L672 21.5V16.5L-13 16.5V21.5Z" fill="black"/>
+            </svg>       
+          </div>
+        </a>
+      </footer>
+    </section>
+    
+  </main>
+  
+   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/8.2.9/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/8.2.9/firebase-auth.js"></script>
+  <script src="/__/firebase/8.2.9/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+
+
+
+</body>
+</html>

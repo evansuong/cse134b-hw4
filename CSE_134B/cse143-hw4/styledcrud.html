@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    body {
+      background: linear-gradient(red, orange, yellow);
+      background-clip: unset;
+    }
+
+    * {
+      font-family: sans-serif;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      background-color: #FFFD;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 5px 10px -5px #000D;
+    }
+
+    #create-post {
+      position: sticky;
+      bottom: 0;
+      padding: 20px;
+      background-color: #000D;
+      color: #FFF;
+      border: none;
+      box-shadow: 0 5px 10px -5px #000D;
+    }
+
+    dialog {
+      padding: 20px;
+      background-color: #000D;
+      color: #FFF;
+      border: none;
+      box-shadow: 0 5px 10px -5px #000D;
+    }
+
+    dialog form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    dialog textarea {
+      resize: none;
+      width: 200px;
+      height: 100px;
+    }
+
+    dialog button {
+      background-color: #000D;
+      color: #FFF;
+      padding: 10px;
+      border: none;
+    }
+
+    #edit-btn {
+      background: url('./styledcrudres/edit.svg');
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+    }
+    #edit-btn:hover {
+      background-color: #0008;
+    }
+    #delete-btn {
+      background: url('./styledcrudres/trash.svg');
+      background-size: contain;
+      width: 20px;
+      height: 20px;
+      padding: 5px;
+    }
+    #delete-btn:hover {
+      background-color: #0008;
+    }
+  </style>
+
+  <ul id="post-list"></ul>
+
+  
+  <template id="post-template">
+    <li id="post-item">
+      <h2 id="title"></h2>
+      <p id="date"></p>
+      <p id="body"></p>
+      <div style="display: flex"> 
+        <p id="edit-btn"></p>
+        <p id="delete-btn"></p>
+      </div>
+    </li>
+  </template>
+
+  <dialog id="post-dialog">
+    <form method="dialog">
+      <label for="post-dialog-title">Title:</label>
+      <input id="post-dialog-title" type="text" />
+      <label for="post-dialog-summary">Summary:</label>
+      <textarea id="post-dialog-summary"></textarea>
+      <div>
+        <button value="cancel">Cancel</button>
+        <button value="default">Post</button>
+      </div>
+    </form>
+  </dialog>
+
+  
+  <dialog id="update-dialog">
+    <form method="dialog">
+      <label for="update-dialog-title">Title:</label>
+      <input id="update-dialog-title" type="text" />
+      <label for="update-dialog-summary">Summary:</label>
+      <textarea id="update-dialog-summary"></textarea>
+      <div>
+        <button value="cancel">Cancel</button>
+        <button value="default">Update</button>
+      </div>
+    </form>
+  </dialog>
+
+  <button id="create-post">Create Post</button>
+  <script src="blog.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.2.6/purify.min.js" integrity="sha512-rXAHWSMciPq2KsOxTvUeYNBb45apbcEXUVSIexVPOBnKfD/xo99uUe5M2OOsC49hGdUrkRLYsATkQQHMzUo/ew==" crossorigin="anonymous"></script>
+
+</body>
+</html>
