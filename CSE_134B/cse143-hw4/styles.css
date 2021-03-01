@@ -46,7 +46,6 @@ header {
   padding-right: 10vw;
   justify-content: end;
   
-  mix-blend-mode: exclusion;
 }
 
 nav {
@@ -70,6 +69,7 @@ header nav ol li {
   display: flex;
   justify-content: center;
   margin: 0 5px;
+  box-shadow: 5px 5px 10px -5px #0008
 }
 
 header nav ol li::before {
