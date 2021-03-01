@@ -50,6 +50,7 @@ header {
 
 nav {
   position: absolute;
+  right: 20px;
 }
 
 header nav ol {
