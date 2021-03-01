@@ -14,6 +14,7 @@
     gtag('config', 'G-S7W45C7FGS');
   </script>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="projects.css"/>
 </head>
 <body>
   <div id="background"></div>
@@ -24,15 +25,15 @@
         <!-- <li>
           <a href="index.html">Home</a>
         </li> -->
-        <!-- <li>
+        <li>
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="projects.html">Projects</a>
+          <a href="#projects">Projects</a>
         </li>
         <li>
-          <a href="projects.html">Contact</a>
-        </li> -->
+          <a href="#contact">Contact</a>
+        </li>
       </ol>
     </nav>
   </header>
@@ -103,16 +104,123 @@
 
       </div>
      
-      <footer>
-        <a href="projects.html">
-          Check out my work!
-          <div id="arrow-container">
-            <svg width="70vw" height="38" viewBox="0 0 675 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M673.768 20.7678C674.744 19.7915 674.744 18.2085 673.768 17.2322L657.858 1.32233C656.882 0.34602 655.299 0.34602 654.322 1.32233C653.346 2.29864 653.346 3.88155 654.322 4.85786L668.464 19L654.322 33.1421C653.346 34.1184 653.346 35.7014 654.322 36.6777C655.299 37.654 656.882 37.654 657.858 36.6777L673.768 20.7678ZM-13 21.5L672 21.5V16.5L-13 16.5V21.5Z" fill="black"/>
-            </svg>       
+    </section>
+
+    <section id="projects">
+      <div id="projects-header">
+        <h1>
+          Things<br/>I Made
+        </h1>
+        <ul id="project-menu">
+          <li><a href="#smartfin-maps">Smartfin Maps</a></li>
+          <li><a href="#fouro">Fouro</a></li>
+          <li><a href="#paper-tower-defense">Paper Tower Defense</a></li>
+          <li><a href="#must">Muse</a></li>
+          <li><a href="#smartfin-api">Smartfin API</a></li>
+        </ul>
+      </div>
+
+     
+      <ul id="project-list">
+        <li id="smartfin-maps">
+          <div>          
+            <h2>Smartfin<br/>Maps</h2>
+            <p>This one's a web map tool that lets you view and download smartfin surf session data. More technically this is a frontend client for my Smartfin API also listed here</p>
           </div>
-        </a>
-      </footer>
+          <img src="res/thumbnails/maps-cover.jpg" alt="smartfin maps"/>
+        </li>
+        <li id="fouro">
+          <img src="res/thumbnails/fouro-cover.jpg" alt="fouro"/>
+          <div>
+            <h2>Fouro</h2>
+            <p>Fouro is a mobile social messaging platform that encourages genuine interactions in a world of social distancing and influencer culture</p>
+          </div>
+        </li>
+        <li id="paper-tower-defense">
+          <div>
+            <h2>Paper Tower Defense</h2>
+            <p>I had fun with this one. It's a 2D tower defense game written exlusively in HTML, CSS, and Javascript</p>
+          </div>
+          <img src="res/thumbnails/paper-cover.jpg" alt="paper tower defense"/>
+        </li>
+        <li id="muse">
+          <img src="res/thumbnails//muse-cover.jpg" alt="muse"/>
+          <div>
+            <h2>Muse</h2>
+            <p>Muse is a mobile application that connects users to new music and new friends based off of their Spotify listenting habits.</p>
+          </div>
+        </li>
+        <li id="smartfin-api">
+          <div>
+            <h2>Smartfin<br/>API</h2>
+            <p>This is a web REST API that I built for my student org in order to speed up our research team's data analysis processes. Not quite frontend but I learned a lot from this</p>
+          </div>
+          <img src="res/thumbnails/api-cover.jpg" alt="smartfin ride api"/>
+        </li>
+      </ul>
+      
+
+    </section>
+    <section id="contact">
+      <!-- <div style="height: 100vh"></div> -->
+      <form class="form-container">
+        <div id="info-container">
+          <h2>Let's Talk!</h2>
+         
+          <div class="form-item">
+            <label class="form-label">Name</label>
+            <input 
+              id="contact-name" 
+              class="input" 
+              placeholder="John Smith" 
+              type="text"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'John Smith'"/>
+          </div>
+         
+          <div class="form-item">
+            <label class="form-label">Email</label>
+            <input 
+              id="contact-email" 
+              class="input" 
+              placeholder="example@email.com" 
+              type="text"
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'example@email.com'"/>
+          </div> 
+
+          <fieldset>
+            <legend>What do you want to talk about?</legend>
+  
+            <div class="field-item">
+              <input type="radio" name="topic" id="book"/>
+              <label for="book">I have a project for you</label>
+            </div>
+            <div class="field-item">
+              <input type="radio" name="topic" id="hire"/>
+              <label for="hire">I'd like you to be part of my company</label>
+            </div>
+            <div class="field-item">
+              <input type="radio" name="topic" id="connect"/>
+              <label for="connect">Let's get connected</label>
+            </div>
+          </fieldset>
+  
+        </div>
+        <div id="message-container" class="form-item">
+          <label class="form-label">Message</label>
+          <textarea 
+            id="contact-message" 
+            
+            class="input" 
+            ></textarea>
+          
+
+        </div>
+        <button type="submit">Send It!</button>
+      </form>
+      
+
     </section>
     
   </main>

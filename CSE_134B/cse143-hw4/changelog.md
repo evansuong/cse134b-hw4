@@ -1,0 +1,5 @@
+# Added
+
+*analytics: In this latest version of the website I implemented Google's firebase analytics in order to collect and analyze data regarding my website. I believe that adding analytics functionality was a top priority because it will allow me to make informed decisions regarding future changes I make to my website. Utilizing the analytics data, I can analyze what parts of my website are helping me out, and other parts of my website that I need to help out.
+
+*styling updates: In this site version I fixed some stlying issues regarding the placement of certain elements on the screen, as well as restyling the projects/contact page. In the last version I wanted to play around with different styles and see how I liked having different styles on my site, to which I am able to decide that I do not like having these confliccting styles, neither was I super impressed with the styling on the project/contact page anyways. Therefore I redid the styling to match my home/about page a little better and I merged the two pages into a single HTML document.
